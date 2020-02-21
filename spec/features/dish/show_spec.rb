@@ -12,5 +12,6 @@ describe "As a visitor on the dish show page", type: :feature do
     expect(page).to have_content(chef_1.name)
     expect(page).to have_content(ingredient_1.name)
     expect(page).to have_content(ingredient_2.name)
+    expect(page).to have_content(dish_1.total_calories)
   end
 end
