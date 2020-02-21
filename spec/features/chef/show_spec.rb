@@ -6,6 +6,8 @@ describe 'As a visitor on the chef show page' do
     @dish_1 = Dish.create(name: "Pizza", description: "Cheesy", chef: @chef_1)
     @ingredient_1 = @dish_1.ingredients.create(name: "Cheese", calories: 200)
     @ingredient_2 = @dish_1.ingredients.create(name: "Dough", calories: 150)
+
+    visit "/chefs/#{@chef_1.id}"
   end
 
   it 'I see the chef name' do
