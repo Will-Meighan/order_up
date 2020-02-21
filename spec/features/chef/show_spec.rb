@@ -4,8 +4,10 @@ describe 'As a visitor on the chef show page' do
   before :each do
     @chef_1 = Chef.create(name: "Will")
     @dish_1 = Dish.create(name: "Pizza", description: "Cheesy", chef: @chef_1)
+    @dish_2 = Dish.create(name: "Burger", description: "Yummy", chef: @chef_1)
     @ingredient_1 = @dish_1.ingredients.create(name: "Cheese", calories: 200)
     @ingredient_2 = @dish_1.ingredients.create(name: "Dough", calories: 150)
+    @ingredient_3 = @dish_2.ingredients.create(name: "Patty", calories: 400)
 
     visit "/chefs/#{@chef_1.id}"
   end
