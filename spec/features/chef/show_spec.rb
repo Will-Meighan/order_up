@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'As a visitor on the chef show page' do
   before :each do
     @chef_1 = Chef.create(name: "Will")
-    @dish_1 = Dish.create(name: "Pizza", description: "Cheesy", chef: chef_1)
+    @dish_1 = Dish.create(name: "Pizza", description: "Cheesy", chef: @chef_1)
     @ingredient_1 = @dish_1.ingredients.create(name: "Cheese", calories: 200)
     @ingredient_2 = @dish_1.ingredients.create(name: "Dough", calories: 150)
   end
